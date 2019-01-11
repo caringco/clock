@@ -31,12 +31,12 @@ func ConvertSecToNano(seconds int) int64 {
 	return int64(seconds) * time.Second.Nanoseconds()
 }
 
-// TimeDiff unix nano time difference of two given time
-func TimeDiff(x, y time.Time) int64 {
-	return x.UnixNano() - y.UnixNano()
-}
-
 // ConvertYearsToNano convert years to nano
 func ConvertYearsToNano(years int) int64 {
 	return int64(years) * Year.Nanoseconds()
+}
+
+// TimeDiff unix nano time difference of two given time
+func TimeDiff(x, y time.Time) int64 {
+	return x.UnixNano() - y.UnixNano()
 }
