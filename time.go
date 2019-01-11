@@ -7,7 +7,7 @@ import (
 const (
 	// Day num of nanosec in a day
 	Day = 24 * time.Hour
-	// Year num of nanosec in a day
+	// Year num of nanosec in a year
 	Year = 365 * Day
 )
 
