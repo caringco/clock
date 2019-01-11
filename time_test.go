@@ -18,3 +18,24 @@ func TestTimeDiff(t *testing.T) {
 		t.Error()
 	}
 }
+
+func TestConvertDaysToNano(t *testing.T) {
+	days := 7
+	expected := int64(days) * Day.Nanoseconds()
+	actual := ConvertDaysToNano(days)
+	if actual != expected {
+		t.Errorf("expected[%d], actual[%d]", expected, actual)
+	}
+}
+
+func TestConvertHoursToNano(t *testing.T) {
+}
+
+func TestConvertMinToNano(t *testing.T) {
+}
+
+func TestConvertSecToNano(t *testing.T) {
+}
+
+func TestConvertYearsToNano(t *testing.T) {
+}
