@@ -2,6 +2,7 @@ package clock
 
 import (
 	"testing"
+	"time"
 )
 
 func TestTimeDiff(t *testing.T) {
@@ -19,6 +20,15 @@ func TestTimeDiff(t *testing.T) {
 	}
 }
 
+func TestConvertYearsToNano(t *testing.T) {
+	years := 7
+	expected := int64(years) * Year.Nanoseconds()
+	actual := ConvertYearsToNano(years)
+	if actual != expected {
+		t.Errorf("expected[%d], actual[%d]", expected, actual)
+	}
+}
+
 func TestConvertDaysToNano(t *testing.T) {
 	days := 7
 	expected := int64(days) * Day.Nanoseconds()
@@ -29,13 +39,28 @@ func TestConvertDaysToNano(t *testing.T) {
 }
 
 func TestConvertHoursToNano(t *testing.T) {
+	hours := 7
+	expected := int64(hours) * time.Hour.Nanoseconds()
+	actual := ConvertHoursToNano(hours)
+	if actual != expected {
+		t.Errorf("expected[%d], actual[%d]", expected, actual)
+	}
 }
 
 func TestConvertMinToNano(t *testing.T) {
+	minutes := 7
+	expected := int64(minutes) * time.Minute.Nanoseconds()
+	actual := ConvertMinToNano(minutes)
+	if actual != expected {
+		t.Errorf("expected[%d], actual[%d]", expected, actual)
+	}
 }
 
 func TestConvertSecToNano(t *testing.T) {
-}
-
-func TestConvertYearsToNano(t *testing.T) {
+	second := 7
+	expected := int64(second) * time.Second.Nanoseconds()
+	actual := ConvertSecToNano(second)
+	if actual != expected {
+		t.Errorf("expected[%d], actual[%d]", expected, actual)
+	}
 }

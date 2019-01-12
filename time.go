@@ -11,29 +11,29 @@ const (
 	Year = 365 * Day
 )
 
-// ConvertDaysToNano convert years to nano
+// ConvertYearsToNano convert years to nanoseconds
+func ConvertYearsToNano(years int) int64 {
+	return int64(years) * Year.Nanoseconds()
+}
+
+// ConvertDaysToNano convert days to nanoseconds
 func ConvertDaysToNano(days int) int64 {
 	return int64(days) * Day.Nanoseconds()
 }
 
-// ConvertHoursToNano convert years to nano
+// ConvertHoursToNano convert hours to nanoseconds
 func ConvertHoursToNano(hours int) int64 {
 	return int64(hours) * time.Hour.Nanoseconds()
 }
 
-// ConvertMinToNano convert years to nano
+// ConvertMinToNano convert minutes to nanoseconds
 func ConvertMinToNano(minutes int) int64 {
 	return int64(minutes) * time.Minute.Nanoseconds()
 }
 
-// ConvertSecToNano convert years to nano
+// ConvertSecToNano convert seconds to nanoseconds
 func ConvertSecToNano(seconds int) int64 {
 	return int64(seconds) * time.Second.Nanoseconds()
-}
-
-// ConvertYearsToNano convert years to nano
-func ConvertYearsToNano(years int) int64 {
-	return int64(years) * Year.Nanoseconds()
 }
 
 // TimeDiff unix nano time difference of two given time
