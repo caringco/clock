@@ -4,14 +4,6 @@ import (
 	"time"
 )
 
-// const (
-// 	numDaysInAYear   = 365
-// 	numHoursInADay   = 24
-// 	numMinInAHour    = 60
-// 	numSecInAMin     = 60
-// 	numNanoSecInASec = 1000 * 1000 * 1000
-// )
-
 // WallClock data structure
 type WallClock struct {
 	Time time.Time
