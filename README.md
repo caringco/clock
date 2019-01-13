@@ -12,17 +12,7 @@ Docs are present at [link](https://godoc.org/github.com/prakashpandey/clock)
 
 - **Stop Watch** : see branch [dev-stopWatch-impl](https://github.com/prakashpandey/clock/tree/dev-stopWatch-impl) for implementation
 
-- **Alarm**: sends ticks on the given go-channel at a given time. Implementation branch[dev-stopWatch-impl](https://github.com/prakashpandey/clock/tree/dev-stopWatch-impl)
-
-## Test coverage
-
-```
-    $go test -coverprofile cover.out
-    
-    PASS
-    coverage: 78.6% of statements
-    ok  	github.com/prakashpandey/clock	0.002s
-```
+- **Alarm**: sends ticks on the given go-channel at a given time. Implementation branch [dev-alarmClock-impl](https://github.com/prakashpandey/clock/tree/dev-alarmClock-impl)
 
 ## Example
 
@@ -37,6 +27,17 @@ Docs are present at [link](https://godoc.org/github.com/prakashpandey/clock)
     // move clock by years, days, hours, min, sec
     wc.MoveClockBy(0, days, 0, 0, 0)
 
-    // t := wc.Now()
-    // n := wc.GetUnixNano()
+    // get time
+    t := wc.Now()
+    n := wc.GetUnixNano()
+```
+
+## Test coverage
+
+```
+    $go test -coverprofile cover.out
+    
+    PASS
+    coverage: 78.6% of statements
+    ok  	github.com/prakashpandey/clock	0.002s
 ```
