@@ -14,7 +14,7 @@ Docs are present at [link](https://godoc.org/github.com/prakashpandey/clock)
 
 - **Alarm**: sends ticks on the given go-channel at a given time.  
 
-        see branch [dev-stopWatch-impl](https://github.com/prakashpandey/clock/tree/dev-stopWatch-impl) for implementation
+        - see branch [dev-stopWatch-impl](https://github.com/prakashpandey/clock/tree/dev-stopWatch-impl) for implementation
 
 ## Test coverage
 
