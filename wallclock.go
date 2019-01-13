@@ -38,6 +38,11 @@ func (w *WallClock) MoveClockBy(years, days, hours, min, sec int) {
 	w.MoveClockAt(w.Time.Add(d))
 }
 
+// Now is the current time of wallckock
+func (w *WallClock) Now() time.Time {
+	return w.Time
+}
+
 // GetUnixNano representation of wallclock
 func (w *WallClock) GetUnixNano() int64 {
 	return w.Time.UnixNano()
