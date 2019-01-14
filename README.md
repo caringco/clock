@@ -27,9 +27,17 @@ Docs are present at [link](https://godoc.org/github.com/prakashpandey/clock)
     // move clock by years, days, hours, min, sec
     wc.MoveClockBy(0, days, 0, 0, 0)
 
-    // get time
-    t := wc.Now()
+    // time api's
+    
+    // GetTime is the current time of wallclock
+    t := wc.GetTime()
+
+    // GetUnixNano is the current time of wallclock returns as a Unix time
     n := wc.GetUnixNano()
+    
+    // Now is the current time of the system
+    t := wc.Now()
+    
 ```
 
 ## Test coverage
