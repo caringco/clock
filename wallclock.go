@@ -4,6 +4,12 @@ import (
 	"time"
 )
 
+// TimeFunc provides the current time by default when required
+//
+// You can override it to use another time value.  This is useful for testing or if you
+// want to use a different time zone than your system.
+var TimeFunc = time.Now
+
 // WallClock data structure
 type WallClock struct {
 	Time time.Time
@@ -12,13 +18,13 @@ type WallClock struct {
 // NewWallClock create new wallclock object with time now
 func NewWallClock() *WallClock {
 	return &WallClock{
-		Time: time.Now(),
+		Time: TimeFunc(),
 	}
 }
 
 // Reset wallclock time to time now
 func (w *WallClock) Reset() {
-	w.Time = time.Now()
+	w.Time = w.Now()
 }
 
 // MoveClockAt the given time
@@ -41,6 +47,11 @@ func (w *WallClock) MoveClockBy(years, days, hours, min, sec int) {
 // GetTime is the current time of wallckock
 func (w *WallClock) GetTime() time.Time {
 	return w.Time
+}
+
+// Now is the current time of the system
+func (w *WallClock) Now() time.Time {
+	return TimeFunc()
 }
 
 // GetUnixNano representation of wallclock
