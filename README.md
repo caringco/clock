@@ -14,9 +14,11 @@ Docs are present at [link](https://godoc.org/github.com/prakashpandey/clock)
 
 - **Alarm**: sends ticks on the given go-channel at a given time. Implementation branch [dev-alarmClock-impl](https://github.com/prakashpandey/clock/tree/dev-alarmClock-impl)
 
-## Example
+## Examples
 
-```
+### Sample example
+
+```bash
     // create new wallclock instance
     wc := NewWallClock()
 
@@ -36,8 +38,24 @@ Docs are present at [link](https://godoc.org/github.com/prakashpandey/clock)
     n := wc.GetUnixNano()
     
     // Now is the current time of the system
-    t := wc.Now()
-    
+    t := wc.Now()  
+```
+
+### Time func
+
+You can override the default time func by overriding
+
+```bash
+    clock.TimeFunc = MyCustomTimeFunc
+```
+
+Note: `wallclock.Now()` depends on the implementation of `clock.TimeFunc`
+
+### Use wallclock as custom time function
+
+```bash
+    wc := clock.NewWallClock()
+    TimeFunc = wc.GetTime
 ```
 
 ## Test coverage
