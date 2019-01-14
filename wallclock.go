@@ -4,12 +4,6 @@ import (
 	"time"
 )
 
-// TimeFunc provides the current time by default when required
-//
-// You can override it to use another time value.  This is useful for testing or if you
-// want to use a different time zone than your system.
-var TimeFunc = time.Now
-
 // WallClock data structure
 type WallClock struct {
 	Time time.Time

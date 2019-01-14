@@ -11,6 +11,12 @@ const (
 	Year = 365 * Day
 )
 
+// TimeFunc provides the current system time by default
+//
+// You can override it to use another time value.  This is useful for testing or if you
+// want to use a different time zone than your system.
+var TimeFunc = time.Now
+
 // ConvertYearsToNano convert years to nanoseconds
 func ConvertYearsToNano(years int) int64 {
 	return int64(years) * Year.Nanoseconds()
