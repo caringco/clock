@@ -38,8 +38,8 @@ func (w *WallClock) MoveClockBy(years, days, hours, min, sec int) {
 	w.MoveClockAt(w.Time.Add(d))
 }
 
-// Now is the current time of wallckock
-func (w *WallClock) Now() time.Time {
+// GetTime is the current time of wallckock
+func (w *WallClock) GetTime() time.Time {
 	return w.Time
 }
 

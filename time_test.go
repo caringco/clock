@@ -16,7 +16,7 @@ func TestTimeDiff(t *testing.T) {
 	expected := int64(days) * Day.Nanoseconds()
 	actual := TimeDiff(wc2.Time, wc.Time)
 	if expected != actual {
-		t.Error()
+		t.Errorf("expected[%d], actual[%d]", expected, actual)
 	}
 }
 

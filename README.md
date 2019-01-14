@@ -38,6 +38,6 @@ Docs are present at [link](https://godoc.org/github.com/prakashpandey/clock)
     $go test -coverprofile cover.out
     
     PASS
-    coverage: 78.6% of statements
-    ok  	github.com/prakashpandey/clock	0.002s
+    coverage: 80.0% of statements
+    ok  	github.com/prakashpandey/clock	0.003s
 ```

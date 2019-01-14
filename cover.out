@@ -1,0 +1,14 @@
+mode: set
+github.com/prakashpandey/clock/time.go:15.42,17.2 1 1
+github.com/prakashpandey/clock/time.go:20.40,22.2 1 1
+github.com/prakashpandey/clock/time.go:25.42,27.2 1 1
+github.com/prakashpandey/clock/time.go:30.42,32.2 1 1
+github.com/prakashpandey/clock/time.go:35.42,37.2 1 1
+github.com/prakashpandey/clock/time.go:40.37,42.2 1 1
+github.com/prakashpandey/clock/wallclock.go:13.32,17.2 1 1
+github.com/prakashpandey/clock/wallclock.go:20.29,22.2 1 0
+github.com/prakashpandey/clock/wallclock.go:25.46,27.2 1 1
+github.com/prakashpandey/clock/wallclock.go:30.62,32.2 1 0
+github.com/prakashpandey/clock/wallclock.go:35.67,39.2 3 1
+github.com/prakashpandey/clock/wallclock.go:42.41,44.2 1 1
+github.com/prakashpandey/clock/wallclock.go:47.41,49.2 1 0
